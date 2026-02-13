@@ -1,0 +1,10 @@
+src/
+test/
+tsconfig.json
+.gitignore
+.vscode/
+.idea/
+*.log
+.DS_Store
+.env
+node_modules/

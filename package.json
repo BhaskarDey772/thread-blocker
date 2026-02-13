@@ -4,10 +4,21 @@
   "description": "A utility package to block the Node.js main thread for testing purposes",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
     "test": "node test/example.js"
   },
   "keywords": [
@@ -18,13 +29,21 @@
     "performance",
     "event-loop"
   ],
-  "author": "Your Name",
+  "author": "Bhaskar",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhaskar/thread-blocker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bhaskar/thread-blocker/issues"
+  },
+  "homepage": "https://github.com/bhaskar/thread-blocker#readme",
   "devDependencies": {
     "@types/node": "^25.2.3",
     "typescript": "^5.3.3"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=16.0.0"
   }
 }
