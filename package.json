@@ -1,0 +1,30 @@
+{
+  "name": "thread-blocker",
+  "version": "1.0.0",
+  "description": "A utility package to block the Node.js main thread for testing purposes",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "test": "node test/example.js"
+  },
+  "keywords": [
+    "node",
+    "main-thread",
+    "block",
+    "testing",
+    "performance",
+    "event-loop"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
